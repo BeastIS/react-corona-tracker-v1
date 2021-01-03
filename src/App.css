@@ -1,56 +1,31 @@
-* {
-  margin: 0;
-}
-
-body {
-  background-color: #f5f6fa;
+html {
+  scroll-snap-type: y mandatory;
 }
 
 .app {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #f5f6fa;
-  padding: 20px;
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
 }
 
-.app__dropdown {
-  background-color: white;
+.app__videos {
+  position: relative;
+  height: 800px;
+  border-radius: 20px;
+  overflow: scroll;
+  width: 80%;
+  max-width: 500px;
+  scroll-snap-type: y mandatory;
 }
 
-.app__header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  justify-content: space-between;
+/* Hide scrollbar for Chrome, Safari and Opera */
+.app__videos::-webkit-scrollbar {
+  display: none;
 }
 
-.app__header > h1 {
-  color: #fc3c3c;
-  font-size: 2rem;
-}
-
-.app__stats {
-  display: flex;
-  justify-content: space-between;
-}
-
-.app__left {
-  flex: 0.9;
-}
-
-.app__information > h3 {
-  color: #6a5d5d;
-  font-weight: 400;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.app__information > h3:last-of-type {
-  margin-top: 1rem;
-}
-
-@media (max-width: 990px) {
-  .app {
-    flex-direction: column;
-  }
+/* Hide scrollbar for IE, Edge and Firefox */
+.app__videos {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
